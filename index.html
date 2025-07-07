@@ -331,7 +331,7 @@
         return null;
       }
 
-      function setCookie(name, value, days) {
+      function setCookie(name, value, minutes) {
         const expires = new Date(Date.now() + minutes * 60 * 1000).toUTCString();
         document.cookie = `${name}=${value}; expires=${expires}; path=/`;
       }
@@ -341,7 +341,7 @@
       }
 
       acceptBtn.addEventListener("click", function () {
-        setCookie("acceptedCookies", "true", 1);
+        setCookie("acceptedCookies", "true", 10);
         banner.style.display = "none";
       });
     });
